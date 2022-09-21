@@ -4,11 +4,6 @@ import { Layout } from "./Layout.jsx";
 import avatar from './img1.jpeg'
 
 export default function Barra() {
-  const collapseItems = [
-    "About me",
-    "Tecnologies",
-    "Contact"
-  ];
 
   return (
     <Layout>
@@ -75,27 +70,27 @@ export default function Barra() {
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Content>
+
+
+
+
+
         <Navbar.Collapse disableAnimation>
-          {collapseItems.map((item, index) => (
-            <Navbar.CollapseItem
-              key={item}
-              activeColor="warning"
-              css={{
-                color: index === collapseItems.length - 1 ? "$error" : "",
-              }}
-              isActive={index === 2}
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="/"
-              >
-                {item}
-              </Link>
-            </Navbar.CollapseItem>
-          ))}
+          <Navbar.CollapseItem key="About me" activeColor="warning">
+            <Link color="primary" css={{ minWidth: "100%", }} href="/" >
+              About me
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem key="Tecnologies" activeColor="warning">
+            <Link color="primary" css={{ minWidth: "100%", }} href="/tecnologies" >
+            Tecnologies
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem key="Contact" activeColor="warning">
+            <Link color="primary" css={{ minWidth: "100%", }} href="/contact" >
+            Contact
+            </Link>
+          </Navbar.CollapseItem>
         </Navbar.Collapse>
       </Navbar>
     </Layout>
