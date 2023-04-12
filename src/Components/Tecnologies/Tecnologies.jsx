@@ -9,6 +9,7 @@ import python from './images/python.png'
 import mysql from './images/mysql.png'
 import oracle from './images/oracle.png'
 import postgre from './images/postgre.png'
+import reac from './images/docker.png'
 import reac from './images/reac.png'
 import nod from './images/nod.png'
 import gns from './images/gns.png'
@@ -45,6 +46,10 @@ function AboutMe ()  {
         {
           title: "PostgreSQL",
           img: postgre,
+        },
+        {
+          title: "Docker",
+          img: docker,
         },
         {
           title: "React",
